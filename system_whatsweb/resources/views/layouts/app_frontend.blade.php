@@ -57,7 +57,7 @@
         @yield('content')
     </div>
     <div class="simple-footer">
-        {{ __('installer_messages.loveSaudia') . "</br>" }}
+        {{ __('installer_messages.loveSaudia') }}
         {!! "</br>" !!}
         {{ __('installer_messages.copyright') }} &copy; {{ date("Y") . " " . __('installer_messages.'. setting('general.site_name')) }}
     </div>
