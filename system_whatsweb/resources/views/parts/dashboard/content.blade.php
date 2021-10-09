@@ -35,7 +35,7 @@ $statistic = new App\Facades\Statistic;
 
             <div class="card-header">
 
-              <h4>{{ url('/backend') ? 'Total Link' : __('installer_messages.total link') }}</h4>
+              <h4>{{ Auth::user()->type === 'ADMIN' ? 'Total Link' : __('installer_messages.total link') }}</h4>
 
             </div>
 
@@ -65,7 +65,7 @@ $statistic = new App\Facades\Statistic;
 
             <div class="card-header">
 
-              <h4>{{ url('/backend') ? 'Today Visit' : __('installer_messages.today visit') }}</h4>
+              <h4>{{ Auth::user()->type === 'ADMIN' ? 'Today Visit' : __('installer_messages.today visit') }}</h4>
 
             </div>
 
@@ -95,7 +95,7 @@ $statistic = new App\Facades\Statistic;
 
             <div class="card-header">
 
-              <h4>{{ url('/backend') ? 'Yesterday Visit' : __('installer_messages.yesterday visit') }}</h4>
+              <h4>{{ Auth::user()->type === 'ADMIN' ? 'Yesterday Visit' : __('installer_messages.yesterday visit') }}</h4>
 
             </div>
 
@@ -125,7 +125,7 @@ $statistic = new App\Facades\Statistic;
 
             <div class="card-header">
 
-              <h4>{{ url('/backend') ? '7 Days Visit' : __('installer_messages.7 days visit') }}</h4>
+              <h4>{{ Auth::user()->type === 'ADMIN' ? '7 Days Visit' : __('installer_messages.7 days visit') }}</h4>
 
             </div>
 
@@ -151,7 +151,7 @@ $statistic = new App\Facades\Statistic;
 
           <div class="card-header">
 
-            <h4>{{ url('/backend') ? 'Last 7 Days' : __('installer_messages.last 7 days') }}</h4>
+            <h4>{{ Auth::user()->type === 'ADMIN' ? 'Last 7 Days' : __('installer_messages.last 7 days') }}</h4>
 
           </div>
 
@@ -171,7 +171,7 @@ $statistic = new App\Facades\Statistic;
 
           <div class="card-header">
 
-            <h4>{{ url('/backend') ? 'Top 5 Links' : __('installer_messages.top 5 links') }}</h4>
+            <h4>{{ Auth::user()->type === 'ADMIN' ? 'Top 5 Links' : __('installer_messages.top 5 links') }}</h4>
 
           </div>
 
@@ -225,7 +225,7 @@ $statistic = new App\Facades\Statistic;
 
             @else
 
-            <p class="lead text-center">{{ url('/backend') ? 'No Data' : __('installer_messages.no data') }}</p>
+            <p class="lead text-center">{{ Auth::user()->type === 'ADMIN' ? 'No Data' : __('installer_messages.no data') }}</p>
 
             @endif
 
