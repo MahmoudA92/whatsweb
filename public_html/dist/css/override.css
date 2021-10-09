@@ -1,0 +1,18 @@
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+body.layout-3 .navbar.navbar-secondary .navbar-nav>.nav-item.active>.nav-link:before {
+    left: 0;
+}
+
+.dropdown-toggle:after {
+    margin-right: .255em;
+    margin-left: 0em
+}
+
+.card .card-header h4+.card-header-action,
+.card .card-header h4+.card-header-form {
+    margin-right: auto;
+    margin-left: inherit
+}
