@@ -67,7 +67,7 @@
 			<div class="form-group row">
 				<label class="col-lg-4 col-form-label text-lg-right text-left" for="slug">{{ __('installer_messages.custom slug') }}</label>
 				<div class="col-lg-8">
-					<div class="input-group">
+					<div class="input-group" style="direction:ltr">
 						<div class="input-group-prepend">
 							<div class="input-group-text">
 								{!! url('') . '/' !!}
