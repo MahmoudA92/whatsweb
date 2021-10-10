@@ -1,0 +1,19 @@
+// Fonts
+// @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@font-face {
+    font-family: 'Samsung-One-Arabic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../public/fonts/SamsungOneArabic-400.ttf');
+}
+
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Bootstrap RTL
+// @import 'bootstrap_RTL';
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
