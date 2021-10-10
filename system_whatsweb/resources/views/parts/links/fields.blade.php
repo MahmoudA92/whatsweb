@@ -18,7 +18,7 @@
 		@if((request()->type ?? @$the_type ?? $link->type) == 'WHATSAPP')
 			<div class="form-group row">
 				<label class="col-lg-4 col-form-label text-lg-right text-left" for="phone">{{ __('installer_messages.phone code') }}</label>
-				<div class="col-lg-8">
+				<div class="col-lg-8 text-right">
 					<select class="form-control select2" name="phone_code" id="phone_code">
 						@foreach(phone_codes() as $phone)
 							<option value="{{ $phone['dial_code'] }}" {{ $phone['dial_code'] == (isset($link) ? $link->phone_code : setting('general.site_country')) ? 'selected' : '' }}>
@@ -32,7 +32,7 @@
 			<div class="form-group row">
 				<label class="col-lg-4 col-form-label text-lg-right text-left" for="phone_number">{{ __('installer_messages.phone number') }}</label>
 				<div class="col-lg-8">
-					<input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="e.g 812345678" maxlength="15" value="{{ isset($link) ? str_replace(optional($link)->phone_code, '', optional($link)->phone_number) :'' }}">
+					<input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="مثلاً: 50551111" maxlength="15" value="{{ isset($link) ? str_replace(optional($link)->phone_code, '', optional($link)->phone_number) :'' }}">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -47,9 +47,11 @@
 					<textarea name="content" class="form-control" id="content" style="height: 200px !important;">
 						
 					</textarea>  
+					<!--
 					<div class="form-text text-right">
 						{{ __('installer_messages.learn more about') }} <a href="https://faq.whatsapp.com/en/android/26000002/" target="_blank">{{ __('installer_messages.formatting your message') }}</a> {{ __('installer_messages.on whatsapp') }}
 					</div>
+					-->
 				</div>
 			</div>
 		@else
@@ -67,7 +69,7 @@
 			<div class="form-group row">
 				<label class="col-lg-4 col-form-label text-lg-right text-left" for="slug">{{ __('installer_messages.custom slug') }}</label>
 				<div class="col-lg-8">
-					<div class="input-group" style="direction:ltr">
+					<div class="input-group">
 						<div class="input-group-prepend">
 							<div class="input-group-text">
 								{!! url('') . '/' !!}
