@@ -14,21 +14,21 @@
             </li>
             @foreach(App\Page::whereShowInMenu(1)->orderBy('sort')->get() as $page)
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('page.show', $page->slug)}}">{{ __('installer_messages.'.strtolower($page->title)) }}</a>
+                    <a class="nav-link" href="{{route('page.show', $page->slug)}}">{{ __(strtolower($page->title)) }}</a>
                 </li>
             @endforeach
         </ul>
     </div>
     <ul class="nav navbar-nav navbar-brand-outer justify-content-center">
         <li class="nav-item">
-            <a class="nav-link navbar-brand" href="{{url('')}}">{{ __('installer_messages.'.config('app.name')) }}</a>
+           <div id="logo"> <a class="nav-link navbar-brand" href="{{url('')}}"><img src="{{url('')}}/media/wttsy-logo-white.png" alt="{{ __('installer_messages.'.config('app.name')) }}" /></a> </div>
         </li>
     </ul>
     @if(!auth()->check())
         <ul class="nav navbar-nav justify-content-end w-100">
             <li class="navbar-text text-dark ml-3 d-sm-none d-none d-lg-block">{{ __('installer_messages.already have an account?') }}</li>
             <li class="nav-item d-sm-none d-none d-lg-block">
-                <a href="{{ route('login') }}" class="btn btn-primary btn-lg btn-icon icon-left"><i class="far fa-user"></i>{{ __('installer_messages.login') }}</a>
+                <a href="{{ route('login') }}" class="btn btn-primary btn-lg btn-icon icon-left"><i class="far fa-user" style="margin-left:5px !important"></i>{{ __('installer_messages.login') }}</a>
             </li>
             <li class="nav-item d-lg-none d-sm-block">
                 <a href="{{ route('login') }}" class="btn btn-primary"><i class="far fa-user"></i></a>
@@ -51,3 +51,10 @@
     </ul>
     @endif
 </nav>
+
+<style>
+#logo img{
+max-width: 150px;
+margin-top: 70px;
+}
+</style>
