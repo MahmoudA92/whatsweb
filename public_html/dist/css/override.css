@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Samsung-One-Arabic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/SamsungOneArabic-400.ttf');
+}
+
 * {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Samsung-One-Arabic', sans-serif;
 }
 
 body.layout-3 .navbar.navbar-secondary .navbar-nav>.nav-item.active>.nav-link:before {
@@ -15,4 +22,33 @@ body.layout-3 .navbar.navbar-secondary .navbar-nav>.nav-item.active>.nav-link:be
 .card .card-header h4+.card-header-form {
     margin-right: auto;
     margin-left: inherit
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__arrow,
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    right: 0;
+    left: 1px;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav:last-child {
+        margin: inherit;
+    }
+    .nav-collapse {
+        margin-right: inherit;
+    }
+    .navbar .navbar-nav {
+        margin: 0 auto;
+    }
+    .nav-collapse .navbar-nav {
+        right: 0;
+        left: inherit;
+    }
+    .nav-collapse .navbar-nav.show {
+        text-align: right;
+        padding-right: 0;
+    }
+    .hero .hero-text h1 {
+        margin-top: 50px;
+    }
 }
