@@ -7,7 +7,7 @@ return [
      *
      */
 
-    "wttsy" => "WTTSY",
+    "wttsy" => "واتسي",
     "home" => "الصفحة الرئيسية",
     "about us" => "من نحن",
     "contact us" => "تواصل معنا",
@@ -34,8 +34,8 @@ return [
     "create new link" => "إنشاء رابط جديد",
     "whatsapp" => "رابط الواتساب",
     "shorten link" => "تقصير الرابط",
-    "phone code" => "رمز الهاتف",
-    "phone number" => "رقم الهاتف",
+    "phone code" => "رمز الدولة",
+    "phone number" => "رقم الجوال/الموبايل",
     "message" => "الرسالة الإفتراضيه ( إختياري )",
     "your message here" => "رسالتك هنا",
     "learn more about" => "تعلم المزيد عن",
