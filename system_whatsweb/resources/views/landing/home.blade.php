@@ -13,8 +13,8 @@
 	<div id="particles-js"></div>
 	<div class="container">
 		<div class="hero-text text-center">
-			<h1>{!! __('installer_messages.'.strtolower(setting('seo.home_h1'))) !!}</h1>
-			<p class="lead">{!! __('installer_messages.'.strtolower(setting('seo.home_description'))) !!}</p>
+			<h1>{!! __(setting('seo.home_h1')) !!}</h1>
+			<p class="lead">{!! __(setting('seo.home_description')) !!}</p>
 			<div class="mt-4">
 				<a href="{{ route('register') }}" class="btn btn-cta btn-icon icon-left"><i class="far fa-user"></i> {{ __('installer_messages.create an account') }}</a>
 			</div>
