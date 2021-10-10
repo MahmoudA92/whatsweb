@@ -5,15 +5,19 @@
 @stop
 
 @section('content')
-
+<style>
+#logo{
+display: none;
+}
+</style>
     <section class="section">
 
-      <div class="container mt-5">
+      <div class="container mt-5" style="margin-top:0 !important">
 
         <div class="row">
 
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4" style="margin: auto">
-
+            <div style="text-align:center"><img src="{{url('')}}/media/wttsy-logo.png" style="max-width:100px" /></div>
             <div class="card card-primary">
 
               <div class="card-header"><h4>{{ __('installer_messages.register') }}</h4></div>
