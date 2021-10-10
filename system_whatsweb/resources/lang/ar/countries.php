@@ -188,6 +188,7 @@ return [
     "Pitcairn" => "بتكايرن",
     "Puerto Rico" => "بورتوريكو",
     "Palestinian, State of" => "فلسطين",
+    "Palestine" => "فلسطين",
     "Portugal" => "البرتغال",
     "Palau" => "بالاو",
     "Paraguay" => "باراجواي",
