@@ -96,7 +96,7 @@
 				<div class="form-group row">
 					<div class="col-lg-4"></div>
 					<div class="col-lg-8 text-right">
-						<i class="fas fa-exclamation-triangle mr-1"></i> {{ __('installer_messages.get your link statistics by') }} <a href="{{ route('register') }}">{{ __('installer_messages.create an account') }}</a>.
+						<i class="fas fa-exclamation-triangle mr-1"></i> {{ __('installer_messages.get your link statistics by') }} <a href="{{ route('register') }}">{{ __('installer_messages.create an account') }}</a> {{ __('installer_messages.free forever') }}.
 					</div>
 				</div>
 			@endif
