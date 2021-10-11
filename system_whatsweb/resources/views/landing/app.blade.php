@@ -26,6 +26,18 @@
     <link rel="stylesheet" href="{{asset('')}}dist/css/frontend.css">
     <link rel="stylesheet" href="{{asset('')}}dist/css/global.css">
     <link rel="stylesheet" href="{{asset('')}}dist/css/override.css">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-208155997-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-208155997-4');
+</script>
+
 </head>
 
 <body class="layout-4">
