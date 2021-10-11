@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="{{asset('')}}dist/css/global.css">
     <link rel="stylesheet" href="{{asset('')}}dist/css/override.css">
 
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208155997-4"></script>
 <script>
@@ -37,6 +36,8 @@
 
   gtag('config', 'UA-208155997-4');
 </script>
+
+
 
 </head>
 
@@ -48,9 +49,9 @@
     </div>
 
     <div class="simple-footer">
-        {{ __('installer_messages.loveSaudia') }} 
+        {{ __('installer_messages.loveSaudia') }}
         {!! "</br>" !!}
-        {{ __('installer_messages.copyright') }} &copy; {{ date("Y") . " " . __('installer_messages.'. setting('general.site_name')) }}
+        {{ __('installer_messages.copyright') }} &copy; {{ date("Y") . " " . __(setting('general.site_name')) }}
     </div>
 
     <!-- General JS Scripts -->
@@ -75,4 +76,3 @@
     @yield('scripts')
 </body>
 </html>
-
