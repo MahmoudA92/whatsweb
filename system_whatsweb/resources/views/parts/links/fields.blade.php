@@ -17,7 +17,7 @@
 		@endif
 		@if((request()->type ?? @$the_type ?? $link->type) == 'WHATSAPP')
 			<div class="form-group row">
-				<label class="col-lg-4 col-form-label text-lg-right text-left" for="phone">{{ __('installer_messages.phone code') }}</label>
+				<label class="col-lg-4 col-form-label text-lg-right text-right" for="phone">{{ __('installer_messages.phone code') }}</label>
 				<div class="col-lg-8 text-right">
 					<select class="form-control select2" name="phone_code" id="phone_code">
 						@foreach(phone_codes() as $phone)
@@ -30,13 +30,13 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-lg-4 col-form-label text-lg-right text-left" for="phone_number">{{ __('installer_messages.phone number') }}</label>
+				<label class="col-lg-4 col-form-label text-lg-right text-right" for="phone_number">{{ __('installer_messages.phone number') }}</label>
 				<div class="col-lg-8">
-					<input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="مثلاً: 50551111" maxlength="15" value="{{ isset($link) ? str_replace(optional($link)->phone_code, '', optional($link)->phone_number) :'' }}">
+					<input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="الرقم بدون صفر, مثلا: 505991111" maxlength="15" value="{{ isset($link) ? str_replace(optional($link)->phone_code, '', optional($link)->phone_number) :'' }}">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-lg-4 col-form-label text-lg-right text-left" for="content">{{ __('installer_messages.message') }}</label>
+				<label class="col-lg-4 col-form-label text-lg-right text-right" for="content">{{ __('installer_messages.message') }}</label>
 				<div class="col-lg-8">
 					<div class="toolbar">
 						<div class="item" data-tool="bold"><i class="fas fa-bold"></i></div>
@@ -56,7 +56,7 @@
 			</div>
 		@else
 			<div class="form-group row">
-				<label class="col-lg-4 col-form-label text-lg-right text-left" for="url">{{ __('installer_messages.url') }}</label>
+				<label class="col-lg-4 col-form-label text-lg-right text-right" for="url">{{ __('installer_messages.url') }}</label>
 				<div class="col-lg-8">
 					<input type="text" name="url" class="form-control" id="url" value="{!! isset($link) ? optional($link)->url : '' !!}">
 					<div class="form-text">
@@ -67,7 +67,7 @@
 		@endif
 		@if(setting('features.custom_slug'))
 			<div class="form-group row">
-				<label class="col-lg-4 col-form-label text-lg-right text-left" for="slug">{{ __('installer_messages.custom slug') }}</label>
+				<label class="col-lg-4 col-form-label text-lg-right text-right" for="slug">{{ __('installer_messages.custom slug') }}</label>
 				<div class="col-lg-8">
 					<div class="input-group" style="direction:ltr">
 						<div class="input-group-prepend">
