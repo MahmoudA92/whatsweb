@@ -11,28 +11,55 @@
 
 <div class="hero">
 	<div id="particles-js"></div>
-	<div class="container">
+	<div class="container" style="max-height:200px">
 		<div class="hero-text text-center">
 			<h1>{!! __(setting('seo.home_h1')) !!}</h1>
 			<p class="lead">{!! __(setting('seo.home_description')) !!}</p>
-			<div class="mt-4">
+			<div class="mt-4" style="display:none">
 				<a href="{{ route('register') }}" class="btn btn-cta btn-icon icon-left"><i class="far fa-user"></i> {{ __('installer_messages.create an account') }}</a>
 			</div>
 		</div>
 	</div>
 </div>
 <section>
-	<div class="container">
+	<div class="container" id="main1">
 		<div class="card">
-			<div class="card-header">
-				<h4>{{ __('installer_messages.create new link') }}</h4>
-			</div>
 			<div class="card-body">
 				@include('parts.links.fields', ['title' => 'Create Link', 'the_type' => 'WHATSAPP', 'show_type' => true])
 			</div>
 		</div>
 	</div>
 </section>
+<style>
+.hero-text{
+max-height: 200px;
+}
+@media screen and (min-width: 1024px){
+#main1{
+margin-top: -320px;
+}
+}
+@media screen and (max-width: 768px){
+#create-wa-link{
+margin-top: -30px;
+}
+#logo{
+margin-top: -70px;
+}
+.hero .hero-text h1 {
+	margin-top: -50px;
+    font-size: 28px;
+}
+#main1{
+margin-top: -320px;
+}
+}
+@media screen and (max-width: 480px){
+#logo{
+padding-right: 40px;
+}
+}
+</style>
 
 @stop
 
