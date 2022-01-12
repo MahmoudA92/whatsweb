@@ -1,4 +1,4 @@
-@extends('landing.app', ['title' => setting('general.site_tagline')])
+@extends('simple.app', ['title' => setting('general.site_tagline')])
 
 @section('plugins_css')
 	<link rel="stylesheet" href="{{ asset('dist/modules/select2/dist/css/select2.min.css') }}">
@@ -13,8 +13,11 @@
 	<div id="particles-js"></div>
 	<div class="container" style="max-height:200px">
 		<div class="hero-text text-center">
-			<h1>{!! __(setting('seo.home_h1')) !!}</h1>
-			<p class="lead">{!! __(setting('seo.home_description')) !!}</p>
+		     <div>
+   <a href="https://wttsy.com" ><img id="mobile-logo-white" src="https://wttsy.com/media/wttsy-logo-white.png" /></a>
+    </div>
+			<h1 id="seo-home">{!! __(setting('seo.home_h1')) !!}</h1>
+			<p class="lead" style="display:none">{!! __(setting('seo.home_description')) !!}</p>
 			<div class="mt-4" style="display:none">
 				<a href="{{ route('register') }}" class="btn btn-cta btn-icon icon-left"><i class="far fa-user"></i> {{ __('installer_messages.create an account') }}</a>
 			</div>
@@ -22,10 +25,10 @@
 	</div>
 </div>
 <section>
-	<div class="container" id="main1">
+	<div class="container" id="main1" style="max-width: 500px">
 		<div class="card">
 			<div class="card-body">
-				@include('parts.links.fields', ['title' => 'Create Link', 'the_type' => 'WHATSAPP', 'show_type' => true])
+				@include('parts.links.fields2', ['title' => 'Create Link', 'the_type' => 'WHATSAPP', 'show_type' => true])
 			</div>
 		</div>
 	</div>
@@ -36,22 +39,19 @@ max-height: 200px;
 }
 @media screen and (min-width: 1024px){
 #main1{
-margin-top: -320px;
+margin-top: -350px;
 }
 }
 @media screen and (max-width: 768px){
-#create-wa-link{
-margin-top: -30px;
-}
 #logo{
 margin-top: -70px;
 }
 .hero .hero-text h1 {
 	margin-top: -50px;
-    font-size: 28px;
+	font-size: 28px;
 }
 #main1{
-margin-top: -320px;
+margin-top: -390px;
 }
 }
 @media screen and (max-width: 480px){
@@ -59,8 +59,17 @@ margin-top: -320px;
 padding-right: 40px;
 }
 }
-</style>
+@media screen and (min-width: 320px) and (max-width: 370px) {
+    
+#seo-home{
+    font-size: 24px;
+}
+    
+}
 
+
+
+</style>
 @stop
 
 @section('plugins_js')
